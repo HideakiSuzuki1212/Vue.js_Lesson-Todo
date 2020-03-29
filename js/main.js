@@ -39,13 +39,12 @@
         this.todos = this.remaining;
       }
     },
-      computed: {
-        remaining: function() {
-          return this.todos.filter(function(todo){
-            return !todo.isDone;
-          });
-        }
-
+    computed: {
+      remaining: function() {
+        return this.todos.filter(function(todo){
+          return !todo.isDone;
+        });
+      }
     }
   });
 })();

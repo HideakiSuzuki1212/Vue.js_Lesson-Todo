@@ -7,6 +7,7 @@
       newItem: '',
       todos: []
     },
+
     watch: {
       todos:  {
         handler: function(){

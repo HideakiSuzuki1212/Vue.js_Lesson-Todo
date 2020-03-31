@@ -5,7 +5,7 @@
     el:'#app',
     data: {
       newItem: '',
-      todos: []
+      todos: Array[0]
     },
 
     watch: {

@@ -7,9 +7,8 @@
       newItem: '',
       todos: []
     },
-
     watch: {
-      todos:  {
+      todos: {
         handler: function(){
         localStorage.setItem('todos',JSON.stringify(this.todos));
       },
@@ -17,7 +16,7 @@
       }
     },
     mounted: function(){
-      this.todos = JSON.parse(localStorage.getItem('todos'))|| "";
+      this.todos = JSON.parse(localStorage.getItem('todos'))|| [];
     },
     methods: {
       addItem: function(){
@@ -42,7 +41,7 @@
     },
     computed: {
       remaining: function() {
-        return this.todos.filter(function(todo){
+        return this.todos.filter(function(todo) {
           return !todo.isDone;
         });
       }
